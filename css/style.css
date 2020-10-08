@@ -9,11 +9,17 @@ body {
   font-family: sans-serif;
 }
 
+
+/* HEADER */
+.main-header {
+  display: flex;
+}
+
 .header-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 600px;
+  height: 850px;
   width: 150px;
   background: coral;
 }
@@ -30,4 +36,22 @@ body {
 
 .account {
   flex-basis: 10%;
+}
+
+.upgrade {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 1900px;
+  height: 100px;
+  background: green;
+}
+
+/* FOOTER*/
+footer {
+  display: flex;
+  align-items: flex-end;
+  height: 100px;
+  max-width: 100%;
+  background: blue;
 }
