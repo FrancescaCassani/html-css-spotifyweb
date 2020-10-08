@@ -55,8 +55,7 @@ body {
   background: pink;
 }
 
-
-.content .scroll {
+.content .scrollbar {
   position: absolute;
   top: 0;
   left: 0;
@@ -66,17 +65,21 @@ body {
   background: dodgerblue;
 }
 
-.content .scroll .menu {
-  padding: 100px 20px  30px;
+.content .scrollbar .menu {
+  padding: 100px 20px 30px;
 }
 
-
-
-
+.content .scrollbar .boxes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
 .content .box {
   width: 200px;
   height: 200px;
+  margin: 30px;
   border: 1px solid blue;
 }
 
@@ -87,4 +90,5 @@ footer {
   width: 100%;
   height: 90px;
   background: blue;
+
 }
