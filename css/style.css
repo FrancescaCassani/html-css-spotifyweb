@@ -18,6 +18,14 @@ body {
   text-align: center;
 }
 
+.small {
+  transform: scale(0.8);
+}
+
+.big {
+  transform: scale(1.2);
+}
+
 /* LAYOUT */
 .app {
   display: flex;
@@ -291,6 +299,7 @@ body {
   opacity: .9;
 }
 
+/* Player album */
 .player-album {
   display: flex;
   justify-content: space-between;
@@ -314,7 +323,6 @@ body {
   transform: scale(0.8);
 }
 
-
 .player-action a i:first-child {
   margin-left: -10px;
 }
@@ -324,17 +332,29 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
+/* Player controller */
 .player-controller{
   flex-basis: 40%;
 }
+
+.reproduction {
+  display: flex;
+  justify-content: center;
+}
+
+.reproduction a {
+  padding: 5px 20px;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
 
 
 .player-audio {
