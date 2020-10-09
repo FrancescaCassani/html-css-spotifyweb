@@ -337,7 +337,8 @@ body {
   flex-basis: 40%;
 }
 
-.reproduction {
+.reproduction,
+.sound {
   display: flex;
   justify-content: center;
 }
@@ -346,6 +347,52 @@ body {
   padding: 5px 20px;
   color: #fff;
 }
+
+.sound-bar1,
+.sound-bar2 {
+  max-width: 100%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.sound-bar1::after {
+  content: "";
+  display: inline-block;
+  width: 100px;
+  height: 3px;
+  border-radius: 2px;
+  background: #fff;
+  opacity: .7;
+}
+
+.sound-bar2::after {
+  content: "";
+  display: inline-block;
+  width: 450px;
+  height: 1px;
+  border-radius: 2px;
+  background: #fff;
+  opacity: .7;
+}
+
+.sound p {
+  margin: 0 25px;
+  font-size: 9px;
+  margin-top: 5px;
+}
+
+.sound-bar2 {
+  transform: translatex(-38px);
+  margin-top: 11px;
+}
+
+.sound .sound-bar1 a:hover {
+  border: #1DB954;
+}
+
+
+
+
 
 
 
