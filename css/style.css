@@ -252,7 +252,7 @@ body {
 
 .content-category {
   /* height: 400px; */
-  margin-bottom: 30px; /*tacco sezione per sezione */
+  margin-bottom: 30px; /*stacco sezione per sezione */
 }
 
 .album-list {
@@ -261,12 +261,15 @@ body {
   list-style: none;
 }
 
+.album-list .album img{
+  max-width: 250px;
+}
+
 .album-list .album {
   flex-basis: calc(100% / 6 - 15px); /* dividi lo spazio per 6 ma togli anche lo spazio che metti come margine NB. nelle media query puoi cambiare la divisione in base allo spazio es: /4 oppurew /3*/
   margin-right: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 40px;
   height: 300px; /* Verificare altezza dopo contenuto */
-  background: #ccc;
 }
 
 /* PLAYER */
