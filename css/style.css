@@ -166,11 +166,11 @@ body {
 }
 
 .profile {
-  margin-top: 20px;
+  display: flex;
 }
 
 .profile h5 {
-  transform: translate(25px, -18px);
+  padding-left: 10px;
 }
 
 
@@ -280,27 +280,56 @@ body {
   flex-basis: calc(100% / 6 - 15px); /* dividi lo spazio per 6 ma togli anche lo spazio che metti come margine NB. nelle media query puoi cambiare la divisione in base allo spazio es: /4 oppurew /3*/
   margin-right: 15px;
   margin-bottom: 40px;
-  height: 300px; /* Verificare altezza dopo contenuto */
 }
 
 /* PLAYER */
 .player {
   display: flex;
   justify-content: space-between;
-  /* height: 80px;   /* Verificare altezza dopo contenuto */
-  background: #333;
-}
-
-.player-album,
-.player-controller,
-.player-audio {
-  height: 80px; /* Verificare altezza dopo contenuto */
-  background: #666;
+  padding: 15px 10PX;
+  background: #000;
+  opacity: .9;
 }
 
 .player-album {
+  display: flex;
+  justify-content: space-between;
   flex-basis: 230px; /* stessa larghezza della sidebar */
 }
+
+.player-album .text-album {
+  margin-top: 5px;
+  margin-left: -30px;
+}
+
+.player-album img {
+  width: 40px;
+  height: 40px;
+}
+
+.player-action a i {
+  margin-top: 5px;
+  color: #fff;
+  opacity: .7;
+  transform: scale(0.8);
+}
+
+
+.player-action a i:first-child {
+  margin-left: -10px;
+}
+
+.player-action a i:last-child {
+  margin-right: 20px;
+}
+
+
+
+
+
+
+
+
 
 
 .player-controller{
