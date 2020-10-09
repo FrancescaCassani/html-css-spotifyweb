@@ -1,58 +1,151 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
+    <title>Spotify Project</title>
 </head>
 
-  <body>
+<body>
+  <!-- Root -->
+  <div class="app">
 
-    <div class="main-header">
-      <div class="container">
+    <!-- Main content -->
+    <main class="main-window">
 
-        <aside class="barra-laterale">
-          <div class="logo">Spotify</div>
-          <nav class="nav-bar">Nav-Bar</nav>
-          <div class="account">Account</div>
-        </aside>
+      <!-- Sidebar -->
+      <aside class="side-bar">
 
-        <div class="content">
-          <div class="upgrade">
-            <a href="#">Effettua l'upgrade</a>
+        <!-- Sidebar-top -->
+        <div class="sidebar-top">
+          <div class="logo">
+            <img src="./img-spotify/logo.svg" alt="logo">
           </div>
-          <div class="scrollbar">
-            <nav class="menu text-center">Menu</nav>
-            <div class="boxes">
-              <div class="box">1</div>
-              <div class="box">1</div>
-              <div class="box">1</div>
-              <div class="box">1</div>
-              <div class="box">1</div>
-              <div class="box">1</div>
-            </div>
 
-            <div class="boxes">
-              <div class="box">1</div>
-              <div class="box">1</div>
-            </div>
+          <!-- Home menu -->
+          <nav class="home-menu">
+            <ul>
+              <li>
+                <img src="./img-spotify/home.svg" alt="">
+                <p class="translate">Home</p>
+              </li>
+              <li>
+                <img src="./img-spotify/search.svg" alt="">
+                <p class="translate">Cerca</p>
+              </li>
+              <li>
+                <img src="./img-spotify/libreria.svg" alt="">
+                <p class="translate">La tua libreria</p>
+              </li>
+            </ul>
+          </nav>
 
-            <div class="boxes">
-              <div class="box">1</div>
-              <div class="box">1</div>
-              <div class="box">1</div>
-            </div>
+          <!-- Playlist menu -->
+          <nav class="playlist-menu">
+            <ul>
+              <li>
+                <h5>Playlist</h5>
+              </li>
+              <li class="crea-playlist">
+                <div class="plus-item">
+                  <div class="plus-layover">
+                    <i class="fas fa-plus"></i>
+                  </div>
+                </div>
+                <p>Crea playlist</p>
+              </li>
+              <li>
+                <p>Nome playlist</p>
+              </li>
+              <li>
+                <p>Nome playlist</p>
+              </li>
+              <li>
+                <p>Nome playlist</p>
+              </li>
+              <li>
+                <p>Nome playlist</p>
+              </li>
+              <li>
+                <p>Nome playlist</p>
+              </li>
+              <li>
+                <p>Nome playlist</p>
+              </li>
+              <li>
+                <p>Nome playlist</p>
+              </li>
+            </ul>
+          </nav>
+        </div>
 
-            <div class="boxes">
-              <div class="box">1</div>
-              <div class="box">1</div>
-              <div class="box">1</div>
-            </div>
-
+        <!-- Sidebar-bottom -->
+        <div class="sidebar-bottom">
+          <div class="arrow">
+            <i class="far fa-arrow-alt-circle-down"></i>
+            <small>Installa app</small>
+            <div class="divider"></div>
+          </div>
+          <div class="profile">
+            <img src="./img-spotify/profile.svg" alt="">
+            <h5>John Doe</h5>
           </div>
         </div>
-        <footer>Player</footer>
+      </aside>
+
+      <!-- Contenuto -->
+      <div class="content">
+
+        <!-- Contenuto top bar -->
+        <div class="content-top-bar">top bar</div>
+
+        <!-- Pagina scroll -->
+        <div class="scrollable">
+          <nav class="content-menu">menu
+
+          </nav>
+
+          <section class="content-category">
+            <h2>Titolo</h2>
+            <ul class="album-list">
+              <li class="album"></li>
+              <li class="album"></li>
+              <li class="album"></li>
+              <li class="album"></li>
+              <li class="album"></li>
+              <li class="album"></li>
+            </ul>
+          </section>
+
+          <section class="content-category">
+            <h2>Titolo</h2>
+            <ul class="album-list">
+              <li class="album"></li>
+              <li class="album"></li>
+            </ul>
+          </section>
+
+          <section class="content-category">
+            <h2>Titolo</h2>
+            <ul class="album-list">
+              <li class="album"></li>
+              <li class="album"></li>
+            </ul>
+          </section>
+        </div>
       </div>
-  </body>
-</html>
+    </main>
+
+    <!-- Player -->
+    <footer class="player">
+      <!-- Album -->
+      <div class="player-album">album</div>
+      <!-- Controller -->
+      <div class="player-controller">controller</div>
+      <!-- Audio -->
+      <div class="player-audio">audio</div>
+    </footer>
+  </div>
+</body>

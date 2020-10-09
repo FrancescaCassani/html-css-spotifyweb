@@ -1,4 +1,3 @@
-/* General */
 * {
   margin: 0;
   padding: 0;
@@ -6,89 +5,259 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
 }
 
-/* Utilities */
-.text-center {
-  text-align: center;
+/* UTILITIES */
+.translate {
+  transform: translate(35px, -15px);
 }
 
-
-/* HEADER */
-.main-header {
+/* LAYOUT */
+.app {
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
 
-.container {
+/* MAIN WINDOW */
+.main-window {
   display: flex;
   flex-grow: 1;
-}
-
-.container .barra-laterale {
   background: red;
-  width: 80px;
-  flex-basis: 250px;
 }
 
-.container .barra-laterale .account {
-  position: absolute;
-  bottom: 120px;
-  left: 0;
+/* SIDEBAR */
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 230px;
+  background: #000;
 }
 
-.container .content {
-  position: relative;
-  background: coral;
+.side-bar ul {
+  list-style: none;
+}
+
+
+/* Sidebar-top LOGO*/
+.sidebar-top {
   flex-grow: 1;
+  padding: 5px 15px;
 }
 
-.content .upgrade {
+.sidebar-top .logo img {
+  max-width: 100px;
+  padding-top: 10px;
+  margin-bottom: 25px;
+}
+
+/* Home menu */
+.home-menu ul p {
+  font-size: 12px;
+}
+
+.home-menu ul li:hover {
+  border-left: 3px solid #1DB954;
+  color: #fff;
+  font-weight: bold;
+}
+
+.home-menu ul li {
+  line-height: 10px;
+  vertical-align: middle;
+}
+
+.home-menu ul li img {
+  max-width: 20px;
+}
+
+/* Playlist menu */
+.playlist-menu {
+  position: relative;
+  opacity: .7;
+}
+
+.plus-item {
+  position: relative;
+  transform: translateY(-20px);
+  width: 30px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+.plus-layover {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  }
+
+.plus-layover i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: #000;
+}
+
+
+/* Playlist menu */
+.crea-playlist p {
+  transform: translate(40px, -40px);
+  font-size: 14px;
+}
+
+.playlist-menu h5 {
+  padding-top: 20px;
+  padding-bottom: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.playlist-menu ul li {
+  line-height: 30px;
+}
+
+.playlist-menu ul p {
+  font-size: 12px;
+}
+
+
+/* Sidebar-bottom */
+.sidebar-bottom {
+  margin: 5px 15px;
+}
+
+.sidebar-bottom img {
+  /* position: absolute;
+  left: 0;
+  bottom: 0; */
+  max-width: 25px;
+  max-height: 20px;
+  background: grey;
+  border-radius: 50%;
+}
+
+.arrow {
+  position: relative;
+  opacity: .7;
+}
+
+.divider {
+  max-width: 100%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.divider::after {
+  content: "";
+  display: inline-block;
+  width: 200px;
+  height: 1px;
+  border-radius: 2px;
+  background: #fff;
+  opacity: .7;
+}
+
+.profile {
+  margin-top: 20px;
+}
+
+.profile h5 {
+  transform: translate(25px, -18px);
+}
+
+
+
+
+
+
+
+
+/* CONTENT */
+.content {
+  position: relative;
+  flex-grow: 1;
+  background: #444;
+}
+
+/* Contenuto top bar */
+.content-top-bar {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 90px;
+  height: 90px;   /* Verificare altezza dopo contenuto */
+  background: rgba(0, 0, 0, 0.6);
   z-index: 1;
-  background: pink;
 }
 
-.content .scrollbar {
+/* Pagina scroll */
+.content .scrollable {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  overflow-y: auto;
-  background: dodgerblue;
+  overflow-y: auto; /* se le mie section non arrivano a toccare il 100% non vedrò la barra di scorrimento, altrimenti ce l'avrò. Se metto scroll vedrò sempre la barra. */
+  background: #000;
+  padding: 90px 15px 30px; /* ALMENO ALTEZZA TOPBAR */
 }
 
-.content .scrollbar .menu {
-  padding: 100px 20px 30px;
+.content-menu {
+  background: #222;
+  height: 80px;   /* Verificare altezza dopo contenuto */
 }
 
-.content .scrollbar .boxes {
+.content-category {
+  /* height: 400px; */
+  margin-bottom: 30px; /*tacco sezione per sezione */
+}
+
+.album-list {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   flex-wrap: wrap;
+  list-style: none;
 }
 
-.content .box {
-  width: 200px;
-  height: 200px;
-  margin: 30px;
-  border: 1px solid blue;
+.album-list .album {
+  flex-basis: calc(100% / 6 - 15px); /* dividi lo spazio per 6 ma togli anche lo spazio che metti come margine NB. nelle media query puoi cambiare la divisione in base allo spazio es: /4 oppurew /3*/
+  margin-right: 15px;
+  margin-bottom: 15px;
+  height: 300px; /* Verificare altezza dopo contenuto */
+  background: #ccc;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 90px;
-  background: blue;
+/* PLAYER */
+.player {
+  display: flex;
+  justify-content: space-between;
+  /* height: 80px;   /* Verificare altezza dopo contenuto */
+  background: #333;
+}
 
+.player-album,
+.player-controller,
+.player-audio {
+  height: 80px; /* Verificare altezza dopo contenuto */
+  background: #666;
+}
+
+.player-album {
+  flex-basis: 230px; /* stessa larghezza della sidebar */
+}
+
+
+.player-controller{
+  flex-basis: 40%;
+}
+
+
+.player-audio {
+  flex-basis: 230px;
 }
