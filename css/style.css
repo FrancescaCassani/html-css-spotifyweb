@@ -421,7 +421,7 @@ body {
   opacity: .7;
 }
 
-.line-audio {
+.line-audio:after {
   content: "";
   display: inline-block;
   transform: translate(-28px, 4px);
@@ -430,4 +430,37 @@ body {
   border-radius: 2px;
   background: #fff;
   opacity: .7;
+}
+
+
+/* MEDIA QUERY 1024*/
+@media screen and (max-width: 1024px) {
+  .album-list .album {
+    flex-basis: calc(100% / 4 - 15px); /* dividi lo spazio per 6 ma togli anche lo spazio che metti come margine NB. nelle media query puoi cambiare la divisione in base allo spazio es: /4 oppurew /3*/
+    margin-right: 15px;
+    margin-bottom: 40px;
+    }
+    .album-list .album img {
+      max-width: 150px;
+    }
+
+    .sound-bar1::before {
+      content: "";
+      display: inline-block;
+      width: 70px;
+      height: 3px;
+      border-radius: 2px;
+      background: #fff;
+      opacity: .7;
+    }
+
+    .sound-bar2::after {
+      content: "";
+      display: inline-block;
+      width: 250px;
+      height: 1px;
+      border-radius: 2px;
+      background: #fff;
+      opacity: .7;
+    }
 }
