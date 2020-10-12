@@ -27,7 +27,7 @@ body {
 }
 
 /* LAYOUT */
-.app {
+#app {
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -236,6 +236,7 @@ body {
 .content-menu {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin: 10px 20px;
 }
 
@@ -463,4 +464,27 @@ body {
       background: #fff;
       opacity: .7;
     }
+}
+
+/* MEDIA QUERY 600*/
+@media screen and (max-width: 600px) {
+  .sidebar-top {
+
+  }
+
+
+
+  .content-menu {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: calc(100% / 3);
+  }
+
+
+  .home-menu li p,
+  .playlist-menu,
+  .sidebar-bottom small,
+  .sidebar-bottom h5 {
+    display: none;
+  }
 }
