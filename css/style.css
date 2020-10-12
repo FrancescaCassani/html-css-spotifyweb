@@ -56,7 +56,7 @@ body {
 /* Sidebar-top LOGO*/
 .sidebar-top {
   flex-grow: 1;
-  padding: 5px 15px;
+  margin: 5px 15px;
 }
 
 .sidebar-top .logo img {
@@ -355,7 +355,7 @@ body {
   text-align: center;
 }
 
-.sound-bar1::after {
+.sound-bar1::before {
   content: "";
   display: inline-block;
   width: 100px;
@@ -390,20 +390,44 @@ body {
   border: #1DB954;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* AUDIO */
 .player-audio {
+  display: flex;
   flex-basis: 230px;
+  align-items: center;
+}
+
+.player-audio a i {
+  padding-right: 10px;
+  color: #fff;
+  opacity: .7;
+  transform: scale(0.8);
+}
+
+.line {
+  max-width: 100%;
+  margin: 10px auto;
+  text-align: center;
+  }
+
+  .fa-volume-up::after {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 3px;
+  margin-left: 15px;
+  border-radius: 2px;
+  background: #fff;
+  opacity: .7;
+}
+
+.line-audio {
+  content: "";
+  display: inline-block;
+  transform: translate(-28px, 4px);
+  width: 85px;
+  height: 1px;
+  border-radius: 2px;
+  background: #fff;
+  opacity: .7;
 }
