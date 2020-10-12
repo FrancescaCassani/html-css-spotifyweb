@@ -65,6 +65,10 @@ body {
   margin-bottom: 25px;
 }
 
+.sidebar-top .logo i {
+  display: none;
+}
+
 /* Home menu */
 .home-menu ul p {
   font-size: 12px;
@@ -236,8 +240,12 @@ body {
 .content-menu {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   margin: 10px 20px;
+}
+
+.content-menu .menu {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .content-menu ul {
@@ -311,6 +319,7 @@ body {
   margin-top: 5px;
   margin-left: -30px;
 }
+
 
 .player-album img {
   width: 40px;
@@ -468,23 +477,79 @@ body {
 
 /* MEDIA QUERY 600*/
 @media screen and (max-width: 600px) {
-  .sidebar-top {
-
+  .side-bar {
+    flex-basis: 50px;
   }
 
-
-
-  .content-menu {
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: calc(100% / 3);
+  .sidebar-top .logo img {
+    display: none;
   }
 
+  .sidebar-top .logo i {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+
+  .sidebar-top img {
+    margin-bottom: 10px;
+  }
+
+  .sidebar-bottom .divider {
+    display: none;
+  }
+
+  .sidebar-bottom i {
+    margin-bottom: 15px;
+  }
 
   .home-menu li p,
   .playlist-menu,
   .sidebar-bottom small,
   .sidebar-bottom h5 {
     display: none;
+  }
+
+  .album-list .album {
+    flex-basis: calc(100% / 2 - 15px); /* dividi lo spazio per 6 ma togli anche lo spazio che metti come margine NB. nelle media query puoi cambiare la divisione in base allo spazio es: /4 oppurew /3*/
+    margin-right: 15px;
+    margin-bottom: 40px;
+    }
+
+  .album-list .album img {
+    max-width: 200px;
+  }
+
+  .content-menu .menu {
+    justify-content: center;
+    line-height: 40px;
+  }
+
+  .sound-bar1::before {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 3px;
+    border-radius: 2px;
+    background: #fff;
+    opacity: .7;
+  }
+
+  .sound-bar2::after {
+    content: "";
+    display: inline-block;
+    width: 150px;
+    height: 1px;
+    border-radius: 2px;
+    background: #fff;
+    opacity: .7;
+  }
+
+  .reproduction a {
+    padding: 5px 10px;
+  }
+
+  .sound p {
+    margin: 0 10px;
   }
 }
